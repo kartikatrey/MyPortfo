@@ -1,0 +1,158 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Style for the anchor tag with the class "logo" */
+a.logo {
+    display: inline-block; /* Make the anchor an inline-block to control its dimensions */
+    text-decoration: none;
+    width: 55px;
+
+}
+
+/* Style for the image inside the anchor tag */
+a.logo img {
+    display: block; /* Remove space below the image */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    background: none; /* Maintain the aspect ratio */
+    filter: grayscale(100%);
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+/* Header Section */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex; /* Ensure flexbox properties work */
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .log {
+    color: #333;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+span {
+    color: orange;
+    font-size: 2em;
+}
+
+/* Navigation */
+header ul {
+    display: flex;
+    gap: 40px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #333;
+    transition: 0.5s;
+}
+
+/* Content Section */
+.content {
+    position: relative;
+    max-width: 700px;
+}
+
+.content h2 {
+    font-size: 5.5em;
+    color: #333;
+    transition: 0.5s;
+}
+
+.content h2 span {
+    color: orange;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.content button {
+    position: relative;
+    background: orange;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.content button.chat {
+    background: transparent;
+    color: #333;
+}
+.daynight{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 2em;
+}
+.daynight ion-icon:nth-child(2),
+.banner.night .daynight ion-icon:nth-child(1){
+    display: none;
+}
+.banner.night .daynight ion-icon:nth-child(2){
+    display: block;
+}
+.banner.night{
+    background: #333;
+}
+.banner.night .daynight{
+    color: #fff;
+    background: #444;
+}
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night header ul li a{
+    color: #fff;
+}
+
